@@ -2,20 +2,7 @@ import pytest
 import json
 import requests
 
-# 定义一个 fixture，名为 "init"
-@pytest.fixture(scope="function")
-def init():
-    print("\n=== 初始化操作 ===")
-    # 执行所有的初始化操作，例如初始化数据库连接、文件读取等
-    # 确保在 init fixture 后，所有测试用例均处于相同、独立的环境中
-    # ...
 
-    # teardown 方法 用于在每个测试用例执行之后执行销毁操作
-    yield
-    print("\n=== 操作完成，执行清理工作 ===")
-    # 执行所有的销毁操作，例如关闭数据库连接、删除临时文件
-    # 确保在 teardown 方法后，所有测试用例均执行完成、并将环境恢复到init 运行之前的状态
-    # ...
 
 
 def test_add():
